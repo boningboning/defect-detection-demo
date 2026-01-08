@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplementary Material - Defect Detection Demo</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .meta-info {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .meta-info p {
+            margin: 5px 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>[Paper Title] Wavelet Decoupling and Fusion Network for Aero-Engine Blade Defect Detection</h1>
+    </header>
+
+    <section>
+        <h2>System Demo</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="demo.mp4" type="video/mp4">
+                您的浏览器不支持 HTML5 视频标签。
+            </video>
+        </div>
+        
+        <div class="meta-info">
+            <p><span class="label">Video Name:</span> Prototype demonstration of automated defect detection for aero-engine blades</p>
+            <p><span class="label">Video Description:</span> To implement the aero-engine blade surface defect detection system, we follow a deep software--hardware integration philosophy with intelligent closed-loop control. The WDFNet model is seamlessly integrated with automated inspection equipment and industrial software, realizing embodied intelligence. As shown in above video, the system comprises four core modules: automatic equipment control, humanoid imaging, intelligent recognition, and industrial software analysis. These modules form a unified framework bridging deep learning algorithms, hardware, and inspection software for intelligent defect detection and decision-making.</p>
+            <p><span class="label">Producer:</span> Yining Wang, Haiyong Chen, Binyi Su, and Chuhan Wang</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Abstract</h2>
+        <p>
+            Turbine blades in aerospace engines are critical power components that directly affect flight safety. Even a tiny surface defect may causes serious failures during operation. However, these defects often exhibit low contrast, irregular geometric structure, and significant scale variation. These characteristics lead many existing segmentation methods to suffer from missed detections and imprecise boundary localization, thereby introducing instability and potential safety risks. 
+To address these challenges, this paper proposes a Wavelet Decoupling and Fusion Network (WDFNet) for high-precision detection of turbine blade surface defects. First, we propose a Region of Interest Attention Enhance (RoIAE) Module which utilizes a selective gating mechanism to non-linearly modulate feature responses, effectively highlighting defect regions while suppressing background noise. Subsequently, a Wavelet Frequency Decoupling (WFD) block is integrated into the decoder to explicitly separate structural context from fine-grained edge details without information aliasing, utilizing an adaptive feature fusion strategy to precisely reconstruct multi-scale defect boundaries and textures. 
+Finally, we deploy the WDFNet in our designed automated defect detection system that combines four functional modules: automatic equipment control, humanoid imaging, intelligent recognition, and comprehensive analysis of industrial software. The effectiveness of WDFNet is validated on our Aero-engine Blade Defect Detection dataset (ABDD). Specifically, WDFNet improves the mean IoU of 95.73\% on ABDD compared to advanced post-hoc methods,  while retaining high computational efficiency in practical deployment scenarios.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 School of Artificial Intelligence and Data Science, Hebei University of Technology</p>
+    </footer>
+</div>
+
+</body>
+</html>
